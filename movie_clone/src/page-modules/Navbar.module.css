@@ -1,0 +1,220 @@
+nav {
+  background-color: gold;
+  width: 100vw;
+}
+.navbar_container {
+  width: 80%;
+  margin: auto;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 25% 50% 20%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.navbar_container img {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+.navbar_menu {
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-evenly;
+  font-size: 1.125rem;
+  padding: 1rem 0rem;
+  & a {
+    text-decoration: none;
+    font-family: var(--font-poppins);
+    color: white;
+  }
+  & :hover{
+    color : black;
+  }
+}
+
+.navbar_menu a.active{
+  color : red;
+}
+.navbar_menu_active a .active {
+  color : red;
+}
+
+.navbar_search {
+  display: grid;
+  grid-template-columns: 87% 10%;
+  align-items: center;
+  background-color: white;
+  padding: 1%;
+}
+.navbar_search input {
+  font-family: var(--font-poppins);
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.navbar_search span {
+  font-size: 1.8rem;
+  height: 1.8rem;
+  background-color: transparent;
+}
+.navbar_menu_icon {
+  display: none;
+}
+
+@media screen and (max-width: 370px) {
+  .navbar_container {
+    width: 90%;
+    grid-template-columns: 25% 15%;
+    justify-content: space-between;
+    padding: 2%;
+  }
+  .navbar_container img {
+    height: 2rem;
+  }
+    .navbar_menu_active {
+    background-color: gray;
+    width: 60%;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10000;
+    translate: 10%;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 20px;
+    font-size: 0.75rem;
+    justify-content: center;
+    padding : 7% 0% 0% 0%;
+    a {
+      text-decoration: none;
+      font-family: var(--font-poppins);
+      color: white;
+    }
+  } 
+   .navbar_menu{
+    display: none;
+   }
+  .navbar_search {
+    display: none;
+  }
+  .navbar_menu_icon {
+    display: flex;
+    font-size: 2rem;
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 371px) and (max-width: 576px) {
+  .navbar_container {
+    width: 90%;
+    grid-template-columns: 25% 15%;
+    justify-content: space-between;
+    padding: 2%;
+  }
+  .navbar_container img {
+    height: 2rem;
+  }
+  .navbar_menu_active {
+    background-color: gray;
+    width: 60%;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10000;
+    translate: 10%;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 20px;
+    font-size: 0.875rem;
+    justify-content: center;
+    padding : 7% 0% 0% 0%;
+    a {
+      text-decoration: none;
+      font-family: var(--font-poppins);
+      color: white;
+    }
+  } 
+   .navbar_menu{
+    display: none;
+   }
+  .navbar_search {
+    display: none;
+  }
+  .navbar_menu_icon {
+    display: flex;
+    font-size: 2rem;
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar_container {
+    width: 90%;
+    grid-template-columns: 25% 15%;
+    justify-content: space-between;
+    padding: 2%;
+  }
+  .navbar_container img {
+    height: 2rem;
+  }
+  .navbar_menu_active {
+    background-color: gray;
+    width: 60%;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10000;
+    translate: 10%;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 20px;
+    font-size: 1rem;
+    justify-content: center;
+    padding : 7% 0% 0% 0%;
+    a {
+      text-decoration: none;
+      font-family: var(--font-poppins);
+      color: white;
+    }
+  } 
+   .navbar_menu{
+    display: none;
+   }
+  .navbar_search {
+    display: none;
+  }
+  .navbar_menu_icon {
+    display: flex;
+    font-size: 2rem;
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar_container {
+    width: 80%;
+  }
+  .navbar_search {
+    grid-template-columns: 80% 10%;
+    padding: 2%;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .navbar_container {
+    width: 80%;
+  }
+  .navbar_search {
+    grid-template-columns: 85% 10%;
+    padding: 2%;
+  }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1400px) {
+}
+
+@media screen and (min-width: 1401px) {
+}

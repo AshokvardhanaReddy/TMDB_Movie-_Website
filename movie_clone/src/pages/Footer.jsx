@@ -7,7 +7,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { CiYoutube } from "react-icons/ci";
 
 
-import { SubHeading, FooterContent, Icon } from "../components/SubHeading";
+import { SubHeading, FooterContent, Icon } from "../components/ReusableComponents";
 
 export const Footer = () => {
     return (
