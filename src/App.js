@@ -9,6 +9,7 @@ import { GenrePage } from './pages/GenrePage';
 import { MoviesPage } from "./pages/MoviesPage";
 import { TvShowsPage } from "./pages/TvShowsPage";
 import { MoviePlayer } from "./pages/MoviePlayer";
+import { ErrorPage } from './pages/ErrorPage';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/tvshows" element={<TvShowsPage />} />
         <Route path="/tvshows/:tv_show_name" element={<MoviePlayer />} />
         <Route path="/:genre/:movie_name" element={<MoviePlayer />} />
+        <Route path = "*" element =  {<ErrorPage/>} />
       </Routes>
       <Footer />
 
