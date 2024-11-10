@@ -1,10 +1,11 @@
 
+import { Routes, Route, useLocation } from "react-router-dom";
+import ReactGA from 'react-ga4';
+import { useEffect } from "react";
+
 import { Footer } from './pages/Footer';
 import { Navbar } from './pages/Navbar';
 import { Home } from "./pages/Home";
-
-import { Routes, Route } from "react-router-dom";
-
 import { GenrePage } from './pages/GenrePage';
 import { MoviesPage } from "./pages/MoviesPage";
 import { TvShowsPage } from "./pages/TvShowsPage";
@@ -12,6 +13,13 @@ import { MoviePlayer } from "./pages/MoviePlayer";
 import { ErrorPage } from './pages/ErrorPage';
 
 function App() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Send page view with the current URL
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
 
   return (
     <>
