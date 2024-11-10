@@ -87,12 +87,11 @@ const dummyData = {
   vote_average: 7.1,
   vote_count: 732,
 };
-
 export const MoviePlayer = () => {
   const [movieDeails, setMovieDetails] = useState(dummyData);
-  const [similarMovies, setSimilarMovies] = useState([]);
-  const [video, setVideo] = useState(dummy_video)
-  
+  const [similarMovies, setSimilarMovies] = useState([dummyData]);
+  const [video, setVideo] = useState(dummy_video);
+
   const location = useLocation();
   const movie_id = location.state.id;
 
@@ -101,29 +100,44 @@ export const MoviePlayer = () => {
       .then((res) => res.json())
       .then((data) => setMovieDetails(data));
 
-      fetch(`https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${API_Key}`)
+    fetch(
+      `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=${API_Key}`,
+    )
       .then((res) => res.json())
       .then((data) => {
-        const youtubeTrailer = data.results.find(video => video.site === "YouTube" && video.type === "Trailer");
-        if(youtubeTrailer){
+        const youtubeTrailer = data.results.find(
+          (video) => video.site === "YouTube" && video.type === "Trailer",
+        );
+        if (youtubeTrailer) {
           setVideo(youtubeTrailer.key);
         }
-      } );
+      });
 
-      fetch(`https://api.themoviedb.org/3/movie/${movie_id}/similar?api_key=${API_Key}`)
+    fetch(
+      `https://api.themoviedb.org/3/movie/${movie_id}/similar?api_key=${API_Key}`,
+    )
       .then((res) => res.json())
       .then((data) => setSimilarMovies(data));
-      
   }, [movie_id]);
-const video_link = `https://www.youtube.com/embed/${video}`
 
-console.log(similarMovies);
+  const video_link = `https://www.youtube.com/embed/${video}`;
+
   return (
     <>
       <div className={styles.movie_player}>
-        <iframe src={video_link} className={styles.video_player} ></iframe>
+        <iframe
+          src={video_link}
+          className={styles.video_player}
+          title={movie_id}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
         <WatchingMovieDetails movieData={movieDeails} />
-        <MovieTypeContainer subTitle="You May Also Like" movieData={similarMovies.results}/>
+        <MovieTypeContainer
+          subTitle="You May Also Like"
+          movieData={similarMovies.results}
+          media_type="movies/similar"
+        />
       </div>
     </>
   );

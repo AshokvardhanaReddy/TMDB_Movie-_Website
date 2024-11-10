@@ -1,66 +1,60 @@
-
-
-:root{
-  --font-text : "Roboto", sans-serif;
-  --font-poppins : "Poppins", sans-serif;
+:root {
+  --font-text: "Roboto", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
-*{
+* {
   box-sizing: border-box;
-  margin : 0px;
+  margin: 0px;
   padding: 0px;
 }
 
-html{
-  font-size : 16px;
+html {
+  font-size: 16px;
 }
 
-body{
+body {
   font-family: var(--font-text);
 }
 
-
-
-
-@media screen and  (max-width : 370px){
-  body{
-    font-size : 0.75rem;
-   }
+@media screen and (max-width: 370px) {
+  body {
+    font-size: 0.75rem;
+  }
 }
 
-@media screen and (min-width : 371px ) and (max-width : 576px){
-  body{
-    font-size : 0.875rem;
-   }
+@media screen and (min-width: 371px) and (max-width: 576px) {
+  body {
+    font-size: 0.875rem;
+  }
 }
 
-@media screen and (min-width : 577px ) and (max-width : 768px){
-  body{
-    font-size : 1rem;
-   }
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
 }
 
-@media screen and (min-width : 769px ) and (max-width : 1024px){
-  body{
-    font-size : 1.125rem;
-   }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 1.125rem;
+  }
 }
 
-@media screen and (min-width : 1025px ) and (max-width : 1280px){
-  body{
-    font-size : 1.125rem;
-   }
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  body {
+    font-size: 1.125rem;
+  }
 }
 
-
-@media screen and (min-width : 1281px ) and (max-width : 1400px){
-  body{
-    font-size : 1.5rem;
-   }
+@media screen and (min-width: 1281px) and (max-width: 1400px) {
+  body {
+    font-size: 1.5rem;
+  }
 }
 
-@media screen and (min-width : 1401px ) {
-  body{
-    font-size : 1.5rem;
-   }
+@media screen and (min-width: 1401px) {
+  body {
+    font-size: 1.5rem;
+  }
 }

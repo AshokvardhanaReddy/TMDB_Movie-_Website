@@ -28,16 +28,16 @@ nav {
     font-family: var(--font-poppins);
     color: white;
   }
-  & :hover{
-    color : black;
+  & :hover {
+    color: black;
   }
 }
 
-.navbar_menu a.active{
-  color : red;
+.navbar_menu a.active {
+  color: red;
 }
 .navbar_menu_active a .active {
-  color : red;
+  color: red;
 }
 
 .navbar_search {
@@ -74,7 +74,7 @@ nav {
   .navbar_container img {
     height: 2rem;
   }
-    .navbar_menu_active {
+  .navbar_menu_active {
     background-color: gray;
     width: 60%;
     position: absolute;
@@ -87,16 +87,16 @@ nav {
     grid-gap: 20px;
     font-size: 0.75rem;
     justify-content: center;
-    padding : 7% 0% 0% 0%;
+    padding: 7% 0% 0% 0%;
     a {
       text-decoration: none;
       font-family: var(--font-poppins);
       color: white;
     }
-  } 
-   .navbar_menu{
+  }
+  .navbar_menu {
     display: none;
-   }
+  }
   .navbar_search {
     display: none;
   }
@@ -130,16 +130,16 @@ nav {
     grid-gap: 20px;
     font-size: 0.875rem;
     justify-content: center;
-    padding : 7% 0% 0% 0%;
+    padding: 7% 0% 0% 0%;
     a {
       text-decoration: none;
       font-family: var(--font-poppins);
       color: white;
     }
-  } 
-   .navbar_menu{
+  }
+  .navbar_menu {
     display: none;
-   }
+  }
   .navbar_search {
     display: none;
   }
@@ -173,16 +173,16 @@ nav {
     grid-gap: 20px;
     font-size: 1rem;
     justify-content: center;
-    padding : 7% 0% 0% 0%;
+    padding: 7% 0% 0% 0%;
     a {
       text-decoration: none;
       font-family: var(--font-poppins);
       color: white;
     }
-  } 
-   .navbar_menu{
+  }
+  .navbar_menu {
     display: none;
-   }
+  }
   .navbar_search {
     display: none;
   }

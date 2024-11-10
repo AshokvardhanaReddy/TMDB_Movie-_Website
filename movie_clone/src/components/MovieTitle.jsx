@@ -2,15 +2,15 @@ import styles from "../component-modules/MovieTitle.module.css";
 import { FaLongArrowAltRight, FaLongArrowAltDown } from "react-icons/fa";
 
 import { useState } from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export const MovieTitle = ({subTitle}) => {
+export const MovieTitle = ({ subTitle }) => {
   const [showIcon, setShowIcon] = useState(true);
   const navigate = useNavigate();
 
   const handleShowIconFun = () => {
     setShowIcon((show) => !show);
-    navigate("/movies")
+    navigate("/movies");
   };
   return (
     <>
