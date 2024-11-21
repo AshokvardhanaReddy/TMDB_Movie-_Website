@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { MovieTypeContainer } from "../components/MovieTypeContainer";
 import { API_Key } from "../server";
+import AdComponent from "../components/AdComponent";
 
 export const TvShowsPage = () => {
   const [tvShows, setTvShows] = useState([]);
@@ -14,11 +15,13 @@ export const TvShowsPage = () => {
 
   return (
     <>
+    <AdComponent/>
       <MovieTypeContainer
         subTitle="List of TV Shows"
         movieData={tvShows.results}
         media_type="tvshows"
       />
+    <AdComponent/>
     </>
   );
 };

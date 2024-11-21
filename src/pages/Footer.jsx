@@ -9,10 +9,12 @@ import {
   FooterContent,
   Icon,
 } from "../components/ReusableComponents";
+import AdComponent from "../components/AdComponent";
 
 export const Footer = () => {
   return (
     <>
+      <AdComponent />
       <footer className={styles.footer_container}>
         <div className={styles.footer_main_div}>
           <div>

@@ -7,6 +7,7 @@ import { MovieTypeContainer } from "../components/MovieTypeContainer";
 
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import AdComponent from "../components/AdComponent";
 
 const dummyData = {
   adult: false,
@@ -132,12 +133,15 @@ export const MoviePlayer = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+    <AdComponent/>
         <WatchingMovieDetails movieData={movieDeails} />
+    <AdComponent/>
         <MovieTypeContainer
           subTitle="You May Also Like"
           movieData={similarMovies.results}
           media_type="movies/similar"
         />
+    <AdComponent/>
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+import AdComponent from "../components/AdComponent";
 import { MovieSlider } from "../components/MovieSlider";
 import { MovieTypeContainer } from "../components/MovieTypeContainer";
 import { API_Key } from "../server";
@@ -35,26 +36,31 @@ export const Home = () => {
   return (
     <>
       <MovieSlider movieData={trendingMovies.results} />
+    <AdComponent/>
       <MovieTypeContainer
         subTitle="Popular Movies"
         movieData={popularMovies.results}
         media_type="movies/popular"
       />
+    <AdComponent/>
       <MovieTypeContainer
         subTitle="Trending"
         movieData={trendingMovies.results}
         media_type="movies/trending"
       />
+    <AdComponent/>
       <MovieTypeContainer
         subTitle="Coming Soon"
         movieData={upComingMovies.results}
         media_type="movies/comingsoon"
       />
+    <AdComponent/>
       <MovieTypeContainer
         subTitle="TV Shows"
         movieData={tvShows.results}
         media_type="tvshows"
       />
+    <AdComponent/>
     </>
   );
 };

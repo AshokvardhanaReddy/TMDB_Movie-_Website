@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { MovieTypeContainer } from "../components/MovieTypeContainer";
 import { API_Key } from "../server";
+import AdComponent from "../components/AdComponent";
 
 export const MoviesPage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -13,11 +14,13 @@ export const MoviesPage = () => {
   }, []);
   return (
     <>
+    <AdComponent/>
       <MovieTypeContainer
         subTitle="List of Movies"
         movieData={trendingMovies.results}
         media_type="movies"
       />
+      <AdComponent/>
     </>
   );
 };

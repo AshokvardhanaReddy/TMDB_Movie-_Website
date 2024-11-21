@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { MovieTypeContainer } from "../components/MovieTypeContainer";
 import { API_Key } from "../server";
+import AdComponent from "../components/AdComponent";
 
 export const GenrePage = () => {
   const [actionMovies, setActionMovies] = useState([]);
@@ -14,11 +15,13 @@ export const GenrePage = () => {
 
   return (
     <>
+    <AdComponent/>
       <MovieTypeContainer
         subTitle="All Movies Based on Genre"
         movieData={actionMovies.results}
         media_type="genre"
       />
+    <AdComponent/>
     </>
   );
 };
